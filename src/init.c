@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thblonde <thblonde@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/09 18:41:58 by thblonde          #+#    #+#             */
+/*   Updated: 2024/11/09 18:41:59 by thblonde         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 /* Initialize forks */
@@ -23,7 +35,7 @@ static int	init_forks(t_data *data)
 /* Initialize printer counters and starting */
 static int	init_mutexes(t_data *data)
 {
-    pthread_mutex_init(&data->m_printer, NULL);
+	pthread_mutex_init(&data->m_printer, NULL);
 	return (0);
 }
 
@@ -60,7 +72,7 @@ static void	input_init(int argc, char *argv[], t_data *data)
 
 int	init(int argc, char *argv[], t_data *data)
 {
-    input_init(argc, argv, data);
+	input_init(argc, argv, data);
 	data->philos = malloc(data->n_philos * sizeof(t_philo));
 	if (!data->philos)
 		return (write(2, "Error: memory allocation failed.\n", 32), 1);

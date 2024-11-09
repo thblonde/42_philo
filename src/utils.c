@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thblonde <thblonde@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/09 18:42:05 by thblonde          #+#    #+#             */
+/*   Updated: 2024/11/09 19:09:01 by thblonde         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 int	ft_isspace(int c)
@@ -49,10 +61,10 @@ long int	get_time(void)
 
 void	ft_usleep(long int time_in_ms, t_philo *philo)
 {
-	long int	start_time;
+	long int start_time;
 
 	(void)philo;
 	start_time = get_time();
-	while (get_time() - start_time < time_in_ms)
-		usleep(time_in_ms);
+	while (!philo->data->dead && get_time() - start_time < time_in_ms)
+		usleep(10);
 }
