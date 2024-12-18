@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   6-print.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thblonde <thblonde@student.s19.be>         +#+  +:+       +#+        */
+/*   By: thblonde <thblonde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 14:10:50 by thblonde          #+#    #+#             */
-/*   Updated: 2024/12/12 14:11:17 by thblonde         ###   ########.fr       */
+/*   Updated: 2024/12/18 09:27:42 by thblonde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	print_dead(t_philo *philo)
 void	print_all_eaten(t_data *data)
 {
 	pthread_mutex_lock(&data->mutex_print);
-	printf("Every philosophers ate %d times\n", data->max_nbr_meals);
+	printf("Every philosophers ate %ld times\n", data->max_nbr_meals);
 	pthread_mutex_unlock(&data->mutex_print);
 }

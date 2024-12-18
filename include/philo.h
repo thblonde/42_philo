@@ -6,7 +6,7 @@
 /*   By: thblonde <thblonde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 14:11:44 by thblonde          #+#    #+#             */
-/*   Updated: 2024/12/12 15:14:03 by thblonde         ###   ########.fr       */
+/*   Updated: 2024/12/18 09:27:06 by thblonde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ typedef struct s_philo	t_philo;
 
 typedef struct s_data
 {
-	int					nbr_philos;
+	long				nbr_philos;
 	long				time_to_die;
 	long				time_to_eat;
 	long				time_to_sleep;
-	int					max_nbr_meals;
+	long				max_nbr_meals;
 	bool				five_args;
 	pthread_mutex_t		mutex_dead;
 	bool				dead;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   2-init.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thblonde <thblonde@student.s19.be>         +#+  +:+       +#+        */
+/*   By: thblonde <thblonde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 14:09:48 by thblonde          #+#    #+#             */
-/*   Updated: 2024/12/12 14:10:02 by thblonde         ###   ########.fr       */
+/*   Updated: 2024/12/18 09:22:10 by thblonde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ static void	link_forks(t_data *data)
 
 	i = -1;
 	while (++i < data->nbr_philos - 1)
-	{
 		data->philos[i].right_fork = &data->philos[i + 1].left_fork;
-	}
 	data->philos[i].right_fork = &data->philos[0].left_fork;
 	i = -1;
 	while (++i < data->nbr_philos)

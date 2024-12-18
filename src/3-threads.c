@@ -6,7 +6,7 @@
 /*   By: thblonde <thblonde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 14:10:06 by thblonde          #+#    #+#             */
-/*   Updated: 2024/12/12 15:01:25 by thblonde         ###   ########.fr       */
+/*   Updated: 2024/12/18 09:35:41 by thblonde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	*check_dead(void *p_data)
 	return (NULL);
 }
 
+/* philo routine */
 void	*routine(void *p_philo)
 {
 	t_philo	*philo;
@@ -68,6 +69,7 @@ void	*is_alone(void *alone)
 	return (NULL);
 }
 
+/* if only one philo */
 int	case_one(t_data *data)
 {
 	if (pthread_create(&data->philos[0].thread, NULL, &is_alone,
@@ -78,6 +80,7 @@ int	case_one(t_data *data)
 	return (0);
 }
 
+/* create and join threads */
 int	threads(t_data *data)
 {
 	int	i;
